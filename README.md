@@ -1,31 +1,33 @@
-# hotel-overbooking-optimization
+# Оптимізація овербукінгу в готелі
 
-Minimal working implementation of overbooking optimization for a hotel room inventory.
-This repository contains a simple stochastic model of bookings and cancellations and a gradient-descent optimizer that finds an approximate optimal overbooking level O.
+ Мінімальна робоча реалізація оптимізації овербукінгу для готельного номерного фонду
+ Цей репозиторій містить просту стохастичну модель бронювань та скасувань і оптимізатор градієнтного спуску, який знаходить наближено оптимальний рівень овербукінгу **O**.
 
-## Structure
-- `model.py` — model functions (demand generation, revenue calc).
-- `optimizer.py` — simple gradient-descent optimizer with finite-difference gradient.
-- `main.py` — example script to run simulation and plot results.
-- `requirements.txt` — required Python packages.
-- `LICENSE` — MIT license.
+## Структура
+- `model.py` — функції моделі (генерація попиту, розрахунок доходу).
+- `optimizer.py` — простий оптимізатор градієнтного спуску з обчисленням градієнта кінцевими різницями.
+- `main.py` — приклад скрипта для запуску симуляції та побудови результатів.
+- `requirements.txt` — необхідні Python-пакети.
+- `LICENSE` — ліцензія MIT.
 
-## Quick start
-1. Create virtual environment and install requirements:
+## Швидкий старт
+
+### 1. Створення віртуального середовища та встановлення залежностей
 ```
 python -m venv venv
-source venv/bin/activate   # on Windows: venv\Scripts\activate
+source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-2. Run example:
+2. Запуск прикладу:
 ```
 python main.py
 ```
 
-Outputs:
-- prints optimal O and revenue estimate.
-- saves `results.png` (revenue vs O) to the repository root.
+**Результати роботи:**
+- виводить оптимальне значення O та оцінку доходу;
+- зберігає файл `results.png` (графік «дохід vs O») у кореневій директорії репозиторію.
 
-## Notes
-- This is a minimal educational implementation. For production-quality revenue management, consider adding robust demand forecasting, advanced optimization (SLSQP/ILP), and rigorous validation.
+## Примітки
+- Це мінімальна навчальна реалізація. Для промислового рівня систем управління доходами варто додати надійне прогнозування попиту, розширену оптимізацію (SLSQP/ILP) та ретельну валідацію.
+
